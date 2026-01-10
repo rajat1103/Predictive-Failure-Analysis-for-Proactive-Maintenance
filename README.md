@@ -1,23 +1,43 @@
 PROJECT TITLE ----- PREDICTIVE FAILURE ANALYSIS FOR PROACTIVE MAINTENANCE
 
-A brief description of the project goes here. Explain the problem you are solving and the overall goal.
+This project focuses on early detection of abnormal degradation patterns in critical systems using predictive analytics. By estimating Remaining Useful Life (RUL) from multivariate sensor data, the system identifies high-risk operational behavior and supports proactive intervention.
 
-Features and Methods
-Data Sourcing: The dataset used for this project was the NASA Turbofan Engine Degradation Simulation Dataset.
+DATASET
 
-Data Preparation: The raw data was cleaned by removing irrelevant and constant columns. New features, such as the Remaining Useful Life (RUL), were engineered for the model.
+NASA Turbofan Engine Degradation Simulation Dataset
 
-Modeling: A Random Forest Regressor was built to predict the RUL of the engines. The model was trained on 80% of the data and evaluated on the remaining 20%.
+Multivariate time-series sensor data representing engine health over operational cycles
 
-Performance Evaluation: The model's performance was measured using standard regression metrics.
+APPROACH
 
-Results and Outcomes 
-The model achieved a Mean Absolute Error (MAE) of 29.63 and a Root Mean Squared Error (RMSE) of 41.45.
+Cleaned and preprocessed sensor data
 
-This means the model's predictions for the RUL were, on average, off by about 30 cycles, which is a strong result for this dataset.
+Engineered Remaining Useful Life (RUL) as a continuous risk indicator
 
-Technologies Used 
-Language: Python
+Trained a Random Forest Regressor to model degradation behavior
+
+Evaluated performance using MAE and RMSE
+
+ANOMALY DETECTION EXTENSION
+
+To enhance monitoring and security relevance:
+
+1. Prediction errors were analyzed to detect abnormal behavior
+
+2. A statistical threshold (mean + 2×std) was used to flag high-risk anomalies
+
+3. Large deviations indicate potential abnormal system states
+
+RESULTS
+MAE: 29.63
+
+RMSE: 41.45
+
+Successfully detected rare but significant anomalous degradation patterns
+
+TECHNOLOGIES 
+
+Python, Matplotlib
 
 Libraries: Pandas, NumPy, Scikit-learn
 
